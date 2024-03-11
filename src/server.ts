@@ -5,6 +5,7 @@ import multer from "multer";
 import "./passport.js";
 import { signUp, logIn, logOut } from "./controllers/users.js";
 import authorize from "./authorize.js";
+import cors from 'cors';
 
 const storage = multer.diskStorage({
   destination: (req, file, cb) => {
@@ -20,6 +21,7 @@ const upload = multer({ storage });
 const app = express();
 const port = 3001;
 
+app.use(cors());
 app.use(morgan("dev"));
 app.use(express.json());
 
