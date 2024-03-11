@@ -16,7 +16,7 @@ const setUpDb = async () => {
     )`);
 
   await db.none(
-    `INSERT INTO users (username, password) VALUES ('usuario', 'ususario')`
+    `INSERT INTO users (username, password) VALUES ('usuario', 'usuario')`
   );
 };
 
