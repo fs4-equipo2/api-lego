@@ -16,7 +16,22 @@ const setUpDb = async () => {
     )`);
 
   await db.none(
-    `INSERT INTO users (username, password) VALUES ('usuario', 'usuario')`
+    `INSERT INTO users (username, password) VALUES ('jose1234', 'abc123')`
+  );
+  await db.none(
+    `INSERT INTO users (username, password) VALUES ('maria1234', '123abc')`
+  );
+  await db.none(
+    `INSERT INTO users (username, password) VALUES ('denise1234', 'a1b2c3')`
+  );
+  await db.none(
+    `INSERT INTO users (username, password) VALUES ('jaime1234', '12abc3')`
+  );
+  await db.none(
+    `INSERT INTO users (username, password) VALUES ('camila1234', '1a23bc')`
+  );
+  await db.none(
+    `INSERT INTO users (username, password) VALUES ('martin1234', 'abc123')`
   );
 };
 
