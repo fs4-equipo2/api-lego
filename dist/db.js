@@ -9,17 +9,9 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
 };
 import pgPromise from "pg-promise";
 const pgp = pgPromise();
-const db = pgp("postgres://martingergov:phonicenvelope@localhost:5432/planets");
+const db = pgp("postgres://postgres:lego1234@localhost:5432/legousuarios");
 const setUpDb = () => __awaiter(void 0, void 0, void 0, function* () {
     yield db.none(`
-    DROP TABLE IF EXISTS planets;
-
-    CREATE TABLE planets (
-        id SERIAL NOT NULL PRIMARY KEY,
-        name TEXT NOT NULL,
-        image TEXT
-    );
-
     DROP TABLE IF EXISTS users;
 
     CREATE TABLE users (
@@ -28,9 +20,12 @@ const setUpDb = () => __awaiter(void 0, void 0, void 0, function* () {
         password TEXT NOT NULL,
         token TEXT
     )`);
-    yield db.none(`INSERT INTO planets (name) VALUES ('Earth')`);
-    yield db.none(`INSERT INTO planets (name) VALUES ('Mars')`);
-    yield db.none(`INSERT INTO users (username, password) VALUES ('usuario', 'ususario')`);
+    yield db.none(`INSERT INTO users (username, password) VALUES ('jose1234', 'abc123')`);
+    yield db.none(`INSERT INTO users (username, password) VALUES ('maria1234', '123abc')`);
+    yield db.none(`INSERT INTO users (username, password) VALUES ('denise1234', 'a1b2c3')`);
+    yield db.none(`INSERT INTO users (username, password) VALUES ('jaime1234', '12abc3')`);
+    yield db.none(`INSERT INTO users (username, password) VALUES ('camila1234', '1a23bc')`);
+    yield db.none(`INSERT INTO users (username, password) VALUES ('martin1234', 'abc123')`);
 });
 setUpDb();
 export { db };

@@ -2,7 +2,7 @@ import pgPromise from "pg-promise";
 
 const pgp = pgPromise();
 
-const db = pgp("postgres://martingergov:phonicenvelope@localhost:5432/planets");
+const db = pgp("postgres://postgres:lego1234@localhost:5432/legousuarios");
 
 const setUpDb = async () => {
   await db.none(`
